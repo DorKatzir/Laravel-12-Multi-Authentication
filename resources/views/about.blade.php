@@ -25,10 +25,6 @@
             <a href="">Register</a>
          </nav>
 
-        <h2>Home Page</h2>
-
-       {{-- <h1>Multi-Authentication</h1>
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=wYf7gRYhLPIYrO-6&amp;list=PL38wJGzpQu7NXMKrPlc7UnyGLc5miCkja" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> --}}
-
+        <h2>About Page</h2>
     </body>
 </html>
