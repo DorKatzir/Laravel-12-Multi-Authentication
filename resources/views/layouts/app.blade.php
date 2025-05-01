@@ -3,31 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel12 - Multi Authentication</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/js/app.js'])
         @endif
+
+        <title> @yield('title', 'Laravel 12') </title>
+
     </head>
     <body>
-        <nav>
-            <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('about') }}">About</a>
-            <a href="">Login</a>
-            <a href="">Register</a>
-        </nav>
 
-        @yield('content')
+        @include('layouts.partials.header')
 
-        <x-alert />
+            @yield('content')
 
-    </body>
+        @include('layouts.partials.footer')
+
+</body>
 </html>

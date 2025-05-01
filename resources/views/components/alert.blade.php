@@ -12,6 +12,7 @@
     <!--  - Marcus Aurelius -->
 </div>
 
-<strong>
+<h3 class="">
+
     {{ $type }}
-</strong>
+</h3>
