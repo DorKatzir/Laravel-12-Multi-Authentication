@@ -18,15 +18,16 @@
         @endif
     </head>
     <body>
-         <nav>
+        <nav>
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('about') }}">About</a>
             <a href="">Login</a>
             <a href="">Register</a>
-         </nav>
+        </nav>
 
         @yield('content')
 
+        <x-alert />
 
-          </body>
+    </body>
 </html>
