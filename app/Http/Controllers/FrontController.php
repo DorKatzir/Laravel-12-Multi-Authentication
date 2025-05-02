@@ -16,4 +16,9 @@ class FrontController extends Controller
         return view('about');
     }
 
+    function contact()
+    {
+        return view('contact');
+    }
+
 }

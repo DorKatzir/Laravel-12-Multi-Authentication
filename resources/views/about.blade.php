@@ -1,6 +1,10 @@
-@extends('layouts.app')
-@section('title', 'About Page')
-@section('content')
-    <h2>About Page</h2>
-    <x-alert />
-@endsection
+@extends('layouts.default')
+
+    @section('title', 'About')
+
+
+
+    @section('content')
+        <h1>About Us</h1>
+        <p>This is the about page of our application.</p>
+    @endsection
