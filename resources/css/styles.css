@@ -10,6 +10,9 @@ body{
     height: 100dvh;
     display: flex; /* Fixed display property */
     flex-direction: column;
+    text-wrap-mode: wrap;
+    text-wrap-style: pretty;
+    min-width: 280px;
 }
 
 header{
@@ -37,6 +40,7 @@ nav {
 
 
 main, footer {
+
     width: 100%;
     max-width: 860px;
     margin: 0 auto;
