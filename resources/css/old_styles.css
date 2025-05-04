@@ -1,0 +1,71 @@
+:root{
+    --padding-page: 10px;
+    /* --links: #9371ff; */
+}
+
+body{
+    max-width: unset; /* Fixed max-width property */
+    margin: unset; /* Fixed margin property */
+    padding: unset; /* Fixed padding property */
+    height: 100dvh;
+    display: flex; /* Fixed display property */
+    flex-direction: column;
+    text-wrap-mode: wrap;
+    text-wrap-style: pretty;
+    min-width: 280px;
+}
+
+header{
+    background-color: #1a242f;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    max-width: 860px;
+    padding: var(--padding-page); /* Added padding using CSS variable */
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.dror {
+    margin-right: auto;
+}
+
+
+main, footer {
+
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: var(--padding-page); /* Added padding using CSS variable */
+}
+
+main{
+    flex: 1;
+}
+
+footer {
+    min-height: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
