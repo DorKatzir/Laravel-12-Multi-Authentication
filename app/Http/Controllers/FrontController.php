@@ -21,4 +21,14 @@ class FrontController extends Controller
         return view('contact');
     }
 
+    function register()
+    {
+        return view('register');
+    }
+
+    function login()
+    {
+        return view('login');
+    }
+
 }

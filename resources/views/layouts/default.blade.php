@@ -12,6 +12,7 @@
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
             @vite(['resources/css/app.css', 'resources/css/styles.css', 'resources/js/app.js'])
         @endif
+        <script src="{{ asset('sidebar.js') }}" defer ></script>
 
         <title> Laravel 12 - @yield('title', '') </title>
 
@@ -44,11 +45,11 @@
                         </a>
                     </li> --}}
 
-                    <li class="home-li"><a class="active-link" aria-current="page" href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('about') }}">About</a></li>
-                    <li><a href="{{ route('contact') }}">Contact</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a class="accent-link" href="#">Login</a></li>
+                    <li class="home-li"><a class="{{ request()->is('/') ? 'active-link' : '' }}" aria-current="page" href="{{ route('home') }}">Home</a></li>
+                    <li><a class="{{ request()->is('about') ? 'active-link' : '' }}" href="{{ route('about') }}">About</a></li>
+                    <li><a class="{{ request()->is('contact') ? 'active-link' : '' }}" href="{{ route('contact') }}">Contact</a></li>
+                    <li><a class="{{ request()->is('register') ? 'active-link' : '' }}" href="{{ route('register') }}">Register</a></li>
+                    <li><a class="accent-link {{ request()->is('login') ? 'active-link' : '' }}" href="{{ route('login') }}">Login</a></li>
                 </ul>
             </nav>
 
@@ -62,51 +63,6 @@
         <footer>
             <p><small>© {{ date('Y') }} <strong>Dror.K.Harvest</strong> </small></p>
         </footer>
-
-        <script>
-            console.log('Hello from the default layout!')
-
-            const openButton = document.getElementById('open-sidebar-button')
-            const navbar = document.getElementById('navbar')
-
-            const media = window.matchMedia("(width < 80ch)")
-
-            media.addEventListener('change', (e) => updateNavbar(e))
-
-            function updateNavbar(e){
-                const isMobile = e.matches
-                console.log(isMobile)
-                if(isMobile){
-                    navbar.setAttribute('inert', '')
-                }
-                else{
-                    navbar.removeAttribute('inert')
-                }
-            }
-
-            function openSidebar(){
-                navbar.classList.add('show')
-                openButton.setAttribute('aria-expanded', 'true')
-                navbar.removeAttribute('inert')
-            }
-
-            function closeSidebar(){
-                navbar.classList.remove('show')
-                openButton.setAttribute('aria-expanded', 'false')
-                navbar.setAttribute('inert', '')
-            }
-
-            // For Bookmark Links
-            // const navLinks = document.querySelectorAll('nav a')
-            // navLinks.forEach(link => {
-            //   link.addEventListener('click', () => {
-            //     closeSidebar()
-            //   })
-            // })
-
-            updateNavbar(media)
-
-        </script>
 
 </body>
 </html>
