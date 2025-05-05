@@ -5,12 +5,12 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 
 
         <!-- Styles / Scripts -->
         @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/css/styles.css', 'resources/js/app.js'])
+            @vite([ 'resources/css/styles.css', 'resources/js/app.js'])
         @endif
         <script src="{{ asset('sidebar.js') }}" defer ></script>
 
@@ -49,7 +49,7 @@
                     <li><a class="{{ request()->is('about') ? 'active-link' : '' }}" href="{{ route('about') }}">About</a></li>
                     <li><a class="{{ request()->is('contact') ? 'active-link' : '' }}" href="{{ route('contact') }}">Contact</a></li>
                     <li><a class="{{ request()->is('register') ? 'active-link' : '' }}" href="{{ route('register') }}">Register</a></li>
-                    <li><a class="accent-link {{ request()->is('login') ? 'active-link' : '' }}" href="{{ route('login') }}">Login</a></li>
+                    <li><a class="accent-link {{ request()->is('login') ? 'active-link' : '' }}" href="{{ route('login') }}">Log-in</a></li>
                 </ul>
             </nav>
 

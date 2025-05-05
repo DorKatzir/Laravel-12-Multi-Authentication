@@ -6,6 +6,6 @@
 
 @section('content')
     <h1>Register Page</h1>
-    <h3>Create Your Acoout</h3>
+    <p>Create Your Acoout</p>
 
 @endsection
