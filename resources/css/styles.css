@@ -1,42 +1,35 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 :root{
 
-    --primary-color: #1b1c25;
-    --hover-color: #272832;
+    /* --primary-color: #1b1c25; */
+    /* --hover-color: #272832; */
     --accent-color: #333762;
     --active-color: #767fdc;
     --text-color: #c9c9c9;
     --padding-page: 10px;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 html{
-  font-family: Poppins, 'Segoe UI', sans-serif;
   color: var(--text-color);
-  scroll-behavior: smooth; /*For bookmark links*/
+  scroll-behavior: smooth;
 }
 
 body{
-    max-width: unset; /* Fixed max-width property */
-    margin: unset; /* Fixed margin property */
-    padding: unset; /* Fixed padding property */
+    max-width: unset !important;
+    margin: unset !important;
+    padding: unset !important;
     height: 100dvh;
-    display: flex; /* Fixed display property */
+    display: flex;
     flex-direction: column;
     text-wrap: pretty;
     min-width: 280px;
 
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     /* max-width: 80ch; */
     margin-inline: auto;
-
 }
 
 header{
@@ -47,46 +40,57 @@ header{
     justify-content: center;
 }
 
-main{
+/* main{
   padding: min(5em, 7%);
-}
-main p{
+} */
+/* main p{
   margin-top: .35em;
-}
+} */
 nav{
-  background-color: var(--primary-color);
-  border-bottom: 1px solid var(--hover-color);
+  background-color: var(--background-body);
+  /* border-bottom: 1px solid var(--hover-color); */
   width: 100%;
   max-width: 860px;
 }
 nav ul{
-  list-style: none;
-  display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
 }
+
 nav .home-li{
   margin-right: auto;
 }
+
 nav li{
   display: flex;
 }
+
 nav a{
   display: flex;
   text-decoration: none;
   color: var(--text-color);
-  padding: 1em 2em;
-  transition: background-color 150ms ease;
+
+  padding-inline: 2em;
+  padding-block: 1em;
+  transition: all 150ms ease;
 }
+
 nav a:hover{
   background-color: var(--hover-color);
   text-decoration: inherit;
+  /* transition: background-color 150ms ease; */
+  transition: border-bottom 500ms ease;
 }
 nav a.active-link{
-    background-color: var(--hover-color);
-    border-bottom: 2px solid var(--accent-color);
+    /* background-color: var(--hover-color); */
+    border-bottom: 2px solid var(--active-color);
     /* color: var(--active-color); */
+    transition: border-bottom 500ms ease;
 }
 nav a.accent-link{
-  color: var(--active-color);
+  /* color: var(--active-color); */
   font-weight: bold;
 }
 #open-sidebar-button{
