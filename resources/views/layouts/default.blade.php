@@ -55,7 +55,10 @@
             <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </header>
 
+
         <main id="main-content">
+
+            <livewire:counter />
             @yield('content')
         </main>
 
